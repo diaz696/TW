@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de venta</title>
+    <title>TastyWings</title>
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/dashboard.css"> 
-
 </head>
 <body>
     
@@ -23,10 +23,10 @@
   </a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
-        <a class="nav-link" href="dashboard.php">Realizar venta</a>
+          <a class="nav-link" href="dashboard.php">Realizar venta</a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Registro de ventas</a>
+      <li class="nav-item">
+        <a class="nav-link" href="RegistroVenta.php">Registro de ventas</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="EstadoCaja.php">Estado de caja</a>
@@ -37,54 +37,43 @@
       <li class="nav-item">
           <a class="nav-link" href="Productos.php">Productos</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="RegistrarUsuario.php">Registrar usuario</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Registrar usuario</a>
       </li>
     </ul>
     
     <form class="form-inline my-2 my-lg-0">   
-      <a class="nav-link" href="cerrar.php">Cerrar sesión</a>  
-    </form>
-    
+        <a class="nav-link" href="cerrar.php">Cerrar sesión</a>   
+    </form>  
   </div>
 </nav>
 <!--Aquí termina la barra de navegación-->
 
 <div class="jumbotron jumbotron-fluid text-center jtron">
-      <div class="container jtron">
-          <button type="button" class="btn btn-danger">Eliminar historial de ventas</button>
-      <div class="row">
-          <div class="col-md-4"> 
-          </div> 
-          <div class="col-md-8">
-            <table class="table table-responsive text-center">
-                <thead class="thead-light">
-                    <tr>
-                        <th></th>
-                        <th>ID</th>
-                        <th>Cantidad</th>
-                        <th>Fecha de la venta</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>127</td>
-                      <td>$300</td>
-                      <td>09/04/2020</td>
-                    </tr>
-                 </tbody>
-            </table> 
-          </div>
-      </div>
-    </div>
-</div>
+  <div class="container jtron">
+      <h1 class="font-weight-light">¡Registra a tu administrador de caja!</h1>    
+      <form>
+  <div class="form-group">
+    <label>Nombre</label>
+    <input type="text" class="form-control" placeholder="Nombre">
+  </div>
+  <div class="form-group">
+    <label>Apellido</label>
+    <input type="text" class="form-control" placeholder="Apellido">
+  </div>
+  <div class="form-group">
+    <label>Nickname</label>
+    <input type="text" class="form-control" placeholder="Nickname">
+  </div>
+  <div class="form-group">
+    <label>Password</label>
+    <input type="text" class="form-control" placeholder="Recuerda colocar una contraseña con alto grado de seguridad">
+  </div>
+   <button type="button" class="btn btn-success">Registrar empleado</button>
+</form>
 
-
- 
-
-
-
+  </div> 
+</div> 
     
     
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
