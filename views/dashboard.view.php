@@ -77,9 +77,8 @@
       <div class="row">
           <div class="col-md-6">
             <h1 class="font-weight-light">Confirma la venta</h1>
-            <input type="submit" value="Realizar compra" name="btnBoneless" />
-            <input type="submit" value="Cancelar compra" name="btnBoneless" />  
-          </div> 
+            <button type="button" class="btn btn-success">Confirmar compra</button>
+            <button type="button" class="btn btn-danger">Cancelar compra</button>          </div> 
           <div class="col-md-6">
             <h1 class="font-weight-light">Elementos de venta</h1>
             <table class="table table-responsive text-center">

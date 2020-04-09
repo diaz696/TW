@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TastyWings</title>
+    <title>Registro de venta</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/dashboard.css"> 
+
 </head>
 <body>
     
@@ -35,12 +37,46 @@
     </ul>
     
     <form class="form-inline my-2 my-lg-0">   
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerrar sesión</button>
+      <a class="nav-link" href="cerrar.php">Cerrar sesión</a>  
     </form>
     
   </div>
 </nav>
 <!--Aquí termina la barra de navegación-->
+
+<div class="jumbotron jumbotron-fluid text-center jtron">
+      <div class="container jtron">
+          <button type="button" class="btn btn-danger">Eliminar historial de ventas</button>
+      <div class="row">
+          <div class="col-md-4"> 
+          </div> 
+          <div class="col-md-8">
+            <table class="table table-responsive text-center">
+                <thead class="thead-light">
+                    <tr>
+                        <th></th>
+                        <th>ID</th>
+                        <th>Cantidad</th>
+                        <th>Fecha de la venta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>127</td>
+                      <td>$300</td>
+                      <td>09/04/2020</td>
+                    </tr>
+                 </tbody>
+            </table> 
+          </div>
+      </div>
+    </div>
+</div>
+
+
+ 
+
 
 
     

@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TastyWings</title>
+    <title>Estado de caja</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/dashboard.css"> 
+
 </head>
 <body>
     
@@ -35,13 +37,77 @@
     </ul>
     
     <form class="form-inline my-2 my-lg-0">   
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerrar sesión</button>
+      <a class="nav-link" href="cerrar.php">Cerrar sesión</a>  
     </form>
     
   </div>
 </nav>
 <!--Aquí termina la barra de navegación-->
 
+<div class="jumbotron jumbotron-fluid text-center jtron">
+  <div class="container jtron">
+    <h1 class="font-weight-light">¿Deseas realizar un retiro de caja?</h1>
+<form>
+  <fieldset>
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Descripción de retiro">
+    </div>
+    <div class="row">
+        <div class="col-md-6"> 
+            <div class="form-group">
+                <label for="formGroupExampleInput">Monto a retirar</label>
+                <input type="text" class="form-control" placeholder="Escribe la cantidad en pesos">
+            </div>
+        </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Estado final</label>
+                    <input type="text"  class="form-control disabled" placeholder="Monto final en caja" readonly>
+                </div>
+            </div>
+        </div> 
+    <button type="submit" class="btn btn-primary">Realizar retiro</button>
+    </div>
+  </fieldset>
+</form>  
+  </div>
+</div>
+
+<div class="jumbotron jumbotron-fluid text-center jtron">
+      <div class="container jtron">
+          <button type="button" class="btn btn-danger">Eliminar historial de caja</button>
+          <br>
+          <br>
+      <div class="row">
+          <div class="col-md-2"> 
+          </div> 
+          <div class="col-md-10">
+            <table class="table table-responsive text-center">
+                <thead class="thead-light">
+                    <tr>
+                        <th></th>
+                        <th>ID</th>
+                        <th>Cantidad total</th>
+                        <th>Descripción</th>
+                        <th>¿Quién estuvo a cargo del movimiento?</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>127</td>
+                      <td>$300</td>
+                      <td>Venta</td>
+                      <td>Juan Lopez</td>
+                      <td>09/04/2020</td>
+                    </tr>
+                 </tbody>
+            </table> 
+          </div>
+      </div>
+    </div>
+</div>
 
     
     
