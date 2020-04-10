@@ -5,7 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de venta</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/dashboard.css"> 
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    		<script type="text/javascript">
+
+		function tiempoReal()
+		{
+			var tabla = $.ajax({
+				url:'ConsultaVentas.php',
+				dataType:'text',
+				async:false
+			}).responseText;
+
+			document.getElementById("miTabla").innerHTML = tabla;
+		}
+		setInterval(tiempoReal, 1);
+		</script>
 
 </head>
 <body>
@@ -53,42 +68,21 @@
 <div class="jumbotron jumbotron-fluid text-center jtron">
       <div class="container jtron">
           <button type="button" class="btn btn-danger">Eliminar historial de ventas</button>
+          <br>
+          <br>
       <div class="row">
-          <div class="col-md-4"> 
-          </div> 
-          <div class="col-md-8">
-            <table class="table table-responsive text-center">
-                <thead class="thead-light">
-                    <tr>
-                        <th></th>
-                        <th>ID</th>
-                        <th>Cantidad</th>
-                        <th>Fecha de la venta</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>127</td>
-                      <td>$300</td>
-                      <td>09/04/2020</td>
-                    </tr>
-                 </tbody>
-            </table> 
+
+          <div class="col-md-12">
+              <section id="miTabla">
+                  
+              </section>
           </div>
       </div>
     </div>
-</div>
+</div>  
 
-
- 
-
-
-
-    
-    
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+   <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>-->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
