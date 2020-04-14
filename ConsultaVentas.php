@@ -1,38 +1,31 @@
 <?php
-////////////////// CONEXION A LA BASE DE DATOS ////////////////////////////////////
-$host="localhost";
-$usuario="root";
-$contraseña="";
-$base="tastywings";
 
-$conexion= new mysqli($host, $usuario, $contraseña, $base);
-if ($conexion -> connect_errno)
-{
-	die("Fallo la conexion:(".$conexion -> mysqli_connect_errno().")".$conexion-> 
-		mysqli_connect_error());
+error_reporting(0);
+header('Content-type: application/json; charset=utf-8');
+
+$conexion = new mysqli('localhost', 'root', '', 'tastywings');
+
+if($conexion->connect_errno){
+	$respuesta = [
+		'error' => true
+	];
+} else {
+	$conexion->set_charset("utf8");
+	$statement = $conexion->prepare("SELECT * FROM ventas");
+	$statement->execute();
+	$resultados = $statement->get_result();
+	
+	$respuesta = [];
+	
+	while($fila = $resultados->fetch_assoc()){
+		$usuario = [
+			'id' 		=> $fila['VentaID'],
+			'nombre' 	=> $fila['Cantidad'],
+			'password'		=> $fila['FechaVenta'],
+		];
+		array_push($respuesta, $usuario);
+	}
 }
 
-/////////////////////// CONSULTA A LA BASE DE DATOS ////////////////////////
-$resAlumnos=$conexion->query("SELECT * FROM ventas");
-
-
-///TABLA DONDE SE DESPLIEGAN LOS REGISTROS //////////////////////////////
-echo '<table class="table table-responsive text-center">
-            <thead class="thead-light">
-              <tr>
-              <th>VentaID</th>
-              <th>Cantidad</th>
-              <th>Fecha</th>
-              </tr>';
-
-				while ($filaAlumnos = $resAlumnos->fetch_array(MYSQLI_BOTH))
-				{
-					echo'<tr>
-						 <td>'.$filaAlumnos['VentaID'].'</td>
-						 <td>'.$filaAlumnos['Cantidad'].'</td>
-						 <td>'.$filaAlumnos['FechaVenta'].'</td>
-                                                 <td><button class="btn btn-danger">Cancelar</button></td>
-						 </tr>';
-				}
-				echo '</table>';
+echo json_encode($respuesta);
 ?>

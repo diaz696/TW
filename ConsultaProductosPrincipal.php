@@ -20,7 +20,7 @@ $resAlumnos=$conexion->query("SELECT * FROM producto");
 	while ($filaAlumnos = $resAlumnos->fetch_array(MYSQLI_BOTH))
 	{
             echo'
-            <button class="btn btn-success">'.$filaAlumnos['Nombre'].'</button>
+            <button  class="btn btn-outline-success">'.$filaAlumnos['Nombre'].'</button>
             ';
 	}
 

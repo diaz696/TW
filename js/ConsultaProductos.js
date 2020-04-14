@@ -2,9 +2,8 @@
 		{
 			var tabla = $.ajax({
 				url:'ConsultaProductos.php',
-				dataType:'text',
 				async:false
-			}).responseText;
+			});
 
 			document.getElementById("miTabla").innerHTML = tabla;
 		}

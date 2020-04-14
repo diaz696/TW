@@ -1,11 +1,11 @@
-function tiempoReal()
+		function tiempoReal()
 		{
 			var tabla = $.ajax({
-				url:'ConsultaProductosPrincipal.php',
+				url:'ConsultaVentas.php',
 				dataType:'text',
 				async:false
 			}).responseText;
 
 			document.getElementById("miTabla").innerHTML = tabla;
 		}
-		setInterval(tiempoReal, 5000);
+		setInterval(tiempoReal, 1);
