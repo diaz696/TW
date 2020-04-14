@@ -5,26 +5,20 @@
             <url>views/dashboard.view.php</url>
             <bookmark id="1">
                 <name/>
-                <line>10</line>
+                <line>12</line>
                 <key/>
             </bookmark>
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp64/www/TastyWings/inicioSesion.php</file>
-            <file>file:/C:/wamp64/www/TastyWings/Productos.php</file>
-            <file>file:/C:/wamp64/www/TastyWings/RegistroVenta.php</file>
+            <file>file:/C:/wamp64/www/TastyWings/ConsultaProductos.php</file>
+            <file>file:/C:/wamp64/www/TastyWings/js/ConsultaProductosPrincipal.js</file>
+            <file>file:/C:/wamp64/www/TastyWings/js/ConsultaVentas.js</file>
+            <file>file:/C:/wamp64/www/TastyWings/ConsultaProductosPrincipal.php</file>
             <file>file:/C:/wamp64/www/TastyWings/views/dashboard.view.php</file>
-            <file>file:/C:/wamp64/www/TastyWings/views/RegistrarUsuario.view.php</file>
-            <file>file:/C:/wamp64/www/TastyWings/views/Estadistica.view.php</file>
-            <file>file:/C:/wamp64/www/TastyWings/EstadoCaja.php</file>
+            <file>file:/C:/wamp64/www/TastyWings/js/ConsultaProductos.js</file>
             <file>file:/C:/wamp64/www/TastyWings/ConsultaVentas.php</file>
-            <file>file:/C:/wamp64/www/TastyWings/views/EstadoCaja.view.php</file>
-            <file>file:/C:/wamp64/www/TastyWings/views/Productos.view.php</file>
-            <file>file:/C:/wamp64/www/TastyWings/views/RegistroVenta.view.php</file>
-            <file>file:/C:/wamp64/www/TastyWings/dashboard.php</file>
-            <file>file:/C:/wamp64/www/TastyWings/RegistrarUsuario.php</file>
         </group>
     </open-files>
 </project-private>

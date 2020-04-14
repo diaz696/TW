@@ -13,25 +13,26 @@ if ($conexion -> connect_errno)
 }
 
 /////////////////////// CONSULTA A LA BASE DE DATOS ////////////////////////
-$resAlumnos=$conexion->query("SELECT * FROM ventas");
+$resAlumnos=$conexion->query("SELECT * FROM producto");
 
 
 ///TABLA DONDE SE DESPLIEGAN LOS REGISTROS //////////////////////////////
 echo '<table class="table table-responsive text-center">
             <thead class="thead-light">
               <tr>
-              <th>VentaID</th>
-              <th>Cantidad</th>
-              <th>Fecha</th>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Precio</th>
               </tr>';
 
 				while ($filaAlumnos = $resAlumnos->fetch_array(MYSQLI_BOTH))
 				{
 					echo'<tr>
-						 <td>'.$filaAlumnos['VentaID'].'</td>
-						 <td>'.$filaAlumnos['Cantidad'].'</td>
-						 <td>'.$filaAlumnos['FechaVenta'].'</td>
-                                                 <td><button class="btn btn-danger">Cancelar</button></td>
+						 <td>'.$filaAlumnos['ProductoID'].'</td>
+						 <td>'.$filaAlumnos['Nombre'].'</td>
+						 <td>'.$filaAlumnos['Precio'].'</td>
+                                                 <td><button class="btn btn-danger">Eliminar</button></td>
+                                                 <td><button type="button" class="btn btn-warning">Modificar</button></td>
 						 </tr>';
 				}
 				echo '</table>';

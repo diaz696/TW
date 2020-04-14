@@ -7,20 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/dashboard.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    		<script type="text/javascript">
-
-		function tiempoReal()
-		{
-			var tabla = $.ajax({
-				url:'ConsultaVentas.php',
-				dataType:'text',
-				async:false
-			}).responseText;
-
-			document.getElementById("miTabla").innerHTML = tabla;
-		}
-		setInterval(tiempoReal, 1);
-		</script>
+    <script type="text/javascript" src="js/ConsultaVentas.js"> </script>
 
 </head>
 <body>
@@ -72,7 +59,7 @@
           <br>
       <div class="row">
 
-          <div class="col-md-12">
+          <div class="col-md-12 row justify-content-center align-items-center">
               <section id="miTabla">
                   
               </section>
