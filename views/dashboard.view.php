@@ -6,9 +6,10 @@
     <title>TastyWings</title>
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/dashboard.css"> 
+     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script type="text/javascript" src="js/ConsultaProductosPrincipal.js"> </script>
+    <script src="js/ConsultaProductosPrincipal.js"> </script>
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
     
@@ -68,30 +69,50 @@
   <div class="container jtron">
       <h1 class="font-weight-light">Estado de la venta</h1>
                 <br>
-      <div class="row">
+
+      <div class="row d-flex justify-content-center">
           <div class="col-md-6">
-            <h1 class="font-weight-light">Confirma la venta</h1>
-            <button type="button" class="btn btn-outline-success">Confirmar compra</button>
-            <button type="button" class="btn btn-outline-danger">Cancelar compra</button>       
+            <h1 class="font-weight-light">Cargo de la compra</h1>
+            <br>
+            <div class="row">
+                <input type="number"  id="disabledTextInput" class="form-control" placeholder="Cantidad a pagar" readonly>           
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <br>
+                <button type="button" style="margin: 10px" class="btn btn-outline-success">Confirmar compra</button>
+                <button type="button" style="margin: 10px" class="btn btn-outline-danger">Cancelar compra</button>  
+                </div>
+                 
+            </div>
+    
           </div> 
+
           <div class="col-md-6">
             <h1 class="font-weight-light">Elementos de venta</h1>
-            <table class="table table-responsive text-center">
-                  <thead class="thead-light">
-    <tr>
-      <th></th>
-      <th>Elemento</th>
-      <th>Precio</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>10 boneless</td>
-      <td>$50</td>
-    </tr>
-  </tbody>
+            <div class="row">
+                <div class="col-md-2">
+                    
+                </div>
+                <div class="col-md-10">
+                <table class="table table-responsive" id="tablita">
+                <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Precio</th>
+                  <th> </th>
+                </tr>
+                </thead>
+                <tbody id="body">
+
+                </tbody>
+            </table>
+                </div>
+            </div>
+            
             </div> 
+          
       </div> 
   </div>
 </div>

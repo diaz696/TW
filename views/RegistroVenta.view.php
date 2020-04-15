@@ -60,7 +60,7 @@
       <div class="row">
 
           <div class="col-md-12 row justify-content-center align-items-center">
-              <table id="miTabla" class="table">
+              <table id="miTabla" class="table table-xl-responsive">
                   
               </table>
           </div>

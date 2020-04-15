@@ -2,7 +2,7 @@
 
 error_reporting(0);
 header('Content-type: application/json; charset=utf-8');
-
+$var = $_POST['id'];
 $conexion = new mysqli('localhost', 'root', '', 'tastywings');
 
 if($conexion->connect_errno){
@@ -11,7 +11,7 @@ if($conexion->connect_errno){
 	];
 } else {
 	$conexion->set_charset("utf8");
-	$statement = $conexion->prepare("SELECT * FROM producto");
+	$statement = $conexion->prepare("SELECT * FROM producto where ProductoID='$var'");
 	$statement->execute();
 	$resultados = $statement->get_result();
 	

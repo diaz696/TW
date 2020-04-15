@@ -15,6 +15,7 @@ function cargarFuncion()
     // código a ejecutar si la petición es satisfactoria;
     // la respuesta es pasada como argumento a la función
     success : function(json) {
+        
         var tabla = document.getElementById('miTabla');
 	tabla.innerHTML = '<tr><th>ID</th><th>Cantidad</th><th>Fecha</th><th>Config</th></tr>';
       
