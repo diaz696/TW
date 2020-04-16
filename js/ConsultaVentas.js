@@ -25,14 +25,29 @@ function cargarFuncion()
           <th>${json[i].id}</th>
           <td>${json[i].nombre}</td>
           <td>${json[i].password}</td>
-          <td><button class="btn btn-danger" >Eliminar</button></td>
+          <td><button class="btn btn-danger" id="${json[i].id}" onclick="CancelarVenta(this)">Eliminar</button></td>
           </tr>` ;
 		}		
 }   
 });
 }
-
 setInterval(cargarFuncion, 5000);
+
+function CancelarVenta(boton){
+    
+    var a ={
+        'id':boton.id
+    }; 
+        $.ajax({
+         type : 'POST',
+         url : 'CancelarVenta.php',
+         data: a, 
+    async:false,
+    complete : function(){	
+        alert("eliminado");
+    }   
+    });
+}
                 
 
                 

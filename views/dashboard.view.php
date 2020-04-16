@@ -80,7 +80,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <br>
-                <button type="button" style="margin: 10px" class="btn btn-outline-success">Confirmar compra</button>
+                <button type="button" style="margin: 10px" onclick="ConfirmarCompra()" class="btn btn-outline-success">Confirmar compra</button>
                 <button type="button" style="margin: 10px" class="btn btn-outline-danger">Cancelar compra</button>  
                 </div>
                  

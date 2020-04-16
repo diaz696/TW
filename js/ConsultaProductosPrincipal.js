@@ -66,3 +66,22 @@ function EliminarProducto(boton)
     document.getElementById('disabledTextInput').value=monto;
 }
 
+function ConfirmarCompra(){
+        
+    var Cantidad = {
+    "cantidad" : monto
+    };
+         
+     $.ajax({                        
+           type: "POST",                 
+           url: 'InsertarCompra.php',                     
+           data: Cantidad,
+           complete: function()             
+           {
+               $('#body').empty();
+               monto=0.0;
+               document.getElementById('disabledTextInput').value=monto;
+           }
+       });
+}
+

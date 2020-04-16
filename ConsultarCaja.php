@@ -11,7 +11,7 @@ if($conexion->connect_errno){
 	];
 } else {
 	$conexion->set_charset("utf8");
-	$statement = $conexion->prepare("SELECT * FROM ventas ORDER BY FechaVenta DESC");
+	$statement = $conexion->prepare("SELECT * FROM caja ORDER BY Fecha_Actualizada DESC");
 	$statement->execute();
 	$resultados = $statement->get_result();
 	
@@ -19,9 +19,11 @@ if($conexion->connect_errno){
 	
 	while($fila = $resultados->fetch_assoc()){
 		$usuario = [
-			'id' 		=> $fila['VentaID'],
-			'nombre' 	=> $fila['Cantidad'],
-			'password'		=> $fila['FechaVenta'],
+			'id' 		=> $fila['ID'],
+			'cantidad' 	=> $fila['Cantidad_Total'],
+			'Descripcion'		=> $fila['Descripcion_movimiento'],
+                        'EmpleadoID'		=> $fila['EmpleadoID'],
+                        'Fecha'		=> $fila['Fecha_Actualizada'],
 		];
 		array_push($respuesta, $usuario);
 	}
