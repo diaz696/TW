@@ -16,8 +16,9 @@ function cargarFuncion()
     // la respuesta es pasada como argumento a la función
     success : function(json) {
         
-        var tabla = document.getElementById('body');
-        tabla.innerHTML +="";
+        var tabla = document.getElementById('miTabla');
+	tabla.innerHTML = '<tr><th>ID</th><th>Cantidad</th><th>Descripcion del movimiento</th><th>Empleado</th><th>Fecha</th></tr>';
+      
 		for(var i = 0; i < json.length; i++){
 		  tabla.innerHTML +=  ` 
           <tr>

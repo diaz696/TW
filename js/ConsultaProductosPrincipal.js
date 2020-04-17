@@ -1,3 +1,4 @@
+
 function cargarFuncion()
 {
     $.ajax({
@@ -67,11 +68,11 @@ function EliminarProducto(boton)
 }
 
 function ConfirmarCompra(){
-        
+    
     var Cantidad = {
     "cantidad" : monto
     };
-         
+    ActualizarCaja(monto);      
      $.ajax({                        
            type: "POST",                 
            url: 'InsertarCompra.php',                     
@@ -84,4 +85,38 @@ function ConfirmarCompra(){
            }
        });
 }
+
+function ActualizarCaja(a){
+    
+         $.ajax({                        
+           type: "GET",
+           url: 'ObtenerUltimoCaja.php',                     
+           datatype:'json',
+           success: function(json){
+               var caja=0.0;
+               if(!$.isEmptyObject(json)){
+                  caja= json[0].id;
+               }
+                alert(a);
+               var datos = {
+                "cantidad" : a,
+                "caja": caja,
+                "descripcion": "Venta",
+                "empleado": "10"
+                };
+         
+                $.ajax({                        
+                   type: "POST",                 
+                   url: 'ActualizarCaja.php',                     
+                   data: datos,
+                   complete: function(){
+                       alert("hola");
+                }
+                 });
+           }
+       });
+   
+}
+
+
 

@@ -106,7 +106,7 @@
           <div class="col-md-2"> 
           </div> 
           <div class="col-md-10">
-            <table class="table table-responsive text-center">
+            <table class="table table-responsive text-center" id="miTabla">
                 <thead class="thead-light">
                     <tr>
                         <th></th>
