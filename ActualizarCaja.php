@@ -6,7 +6,13 @@ $var = $_POST['cantidad'];
 $var2 = $_POST['descripcion'];
 $var3 = $_POST['empleado'];
 $var4 = $_POST['caja'];
-$var5= $var+$var4;
+$var5;
+if($_POST['caso']==='1'){
+    $var5= $var+$var4;
+}else{
+    $var5=$var4-$var;
+}
+
 $conexion = new mysqli('localhost', 'root', '', 'tastywings');
 
 if($conexion->connect_errno){

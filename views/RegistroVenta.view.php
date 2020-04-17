@@ -54,7 +54,7 @@
 
 <div class="jumbotron jumbotron-fluid text-center jtron">
       <div class="container jtron">
-          <button type="button" class="btn btn-danger">Eliminar historial de ventas</button>
+          <button type="button" class="btn btn-danger" onclick="EliminarHistorialVentas()">Eliminar historial de ventas</button>
           <br>
           <br>
       <div class="row">

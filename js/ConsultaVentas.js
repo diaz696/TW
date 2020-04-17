@@ -25,7 +25,8 @@ function cargarFuncion()
           <th>${json[i].id}</th>
           <td>${json[i].nombre}</td>
           <td>${json[i].password}</td>
-          <td><button class="btn btn-danger" id="${json[i].id}" onclick="CancelarVenta(this)">Eliminar</button></td>
+          
+          <td><button class="btn btn-danger" id="${json[i].id}" name="${json[i].nombre}" onclick="CancelarVenta(this)">Eliminar</button></td>
           </tr>` ;
 		}		
 }   
@@ -38,14 +39,57 @@ function CancelarVenta(boton){
     var a ={
         'id':boton.id
     }; 
+    
+    $.ajax({                        
+    type: "GET",
+    url: 'ObtenerUltimoCaja.php',                     
+    datatype:'json',
+    success: function(json){
+        
+        var caja=0.0;
+        
+        if(!$.isEmptyObject(json)){
+            caja= json[0].id;
+        }
+        
+    var datos = {
+    "caso": '2',
+    "cantidad" : boton.name,
+    "caja": caja,
+    "descripcion": "Cancelación de venta",
+    "empleado": "10"
+    };      
+                $.ajax({                        
+                   type: "POST",                 
+                   url: 'ActualizarCaja.php',                     
+                   data: datos,
+                   success: function(){ 
+                       alert("se elimino de caja");
+                }
+                 });
+           }
+       });  
+    
         $.ajax({
          type : 'POST',
          url : 'CancelarVenta.php',
          data: a, 
-    async:false,
-    complete : function(){	
+         async:false,
+         complete : function(){	
         alert("eliminado");
     }   
+    });
+}
+
+function EliminarHistorialVentas(){
+    alert("se eliminara");
+    $.ajax({
+        type: 'SET',
+        url: 'EliminarVentas.php',
+        async: false,
+        complete: function(){
+            alert("Eliminados");
+        }
     });
 }
                 

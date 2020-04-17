@@ -2,32 +2,20 @@
 function cargarFuncion()
 {
     $.ajax({
-    // la URL para la petición
     url : 'ConsultaProductos.php',
-
-    // especifica si será una petición POST o GET
-    type : 'GET',
-    
+    type : 'GET', 
     async:false,
-    
-    // el tipo de información que se espera de respuesta
     dataType : 'json',
-
-    // código a ejecutar si la petición es satisfactoria;
-    // la respuesta es pasada como argumento a la función
     success : function(json) {      
         var tabla = document.getElementById('miTabla');
         tabla.innerHTML="";
-		for(var i = 0; i < json.length; i++){
-                     tabla.innerHTML +=  `<button style="margin: 10px" onclick ="ObtenerProducto(this)" id="${json[i].id}" type="button" class="btn btn-outline-primary">${json[i].nombre}</button>`;
-           
-		}		
-}   
-});
+        for(var i = 0; i < json.length; i++){
+            tabla.innerHTML +=  `<button style="margin: 10px" onclick ="ObtenerProducto(this)" id="${json[i].id}" type="button" class="btn btn-outline-primary">${json[i].nombre}</button>`;       
+	}		
+    }   
+    });
 }
-
 setInterval(cargarFuncion, 5000);
-
 
 var monto=0.0;
 var ID=1;
@@ -35,29 +23,30 @@ function ObtenerProducto(boton)
 {
     var id = {
         "id" : boton.id
-        };
+    };
         
     
-     $.ajax({                        
-           type: "POST",                 
-           url: 'ConsultaProductoEspecifico.php',                     
-           data: id, 
-           datatype:'json',
-           success: function(json)             
-           {
-                var tabla = document.getElementById('body');
-		for(var i = 0; i < json.length; i++){
-                    tabla.innerHTML +=            `<tr>
-                        <td>${json[i].id}</td>
-                        <td>${json[i].nombre}</td>
-                        <td>${json[i].precio}</td>
-                        <td><button class="btn btn-danger" id="${json[i].precio}" onclick="EliminarProducto(this)">Eliminar</button></td></tr>`;
-                        monto+=parseFloat(json[i].precio);
-                    }
-                document.getElementById('disabledTextInput').value=monto;
-                ID++;
+    $.ajax({                        
+        type: "POST",                 
+        url: 'ConsultaProductoEspecifico.php',                     
+        data: id, 
+        datatype:'json',
+        success: function(json){
+            var tabla = document.getElementById('body');
+            
+            for(var i = 0; i < json.length; i++){
+                tabla.innerHTML +=            `<tr>
+                <td>${json[i].id}</td>
+                <td>${json[i].nombre}</td>
+                <td>${json[i].precio}</td>
+                <td><button class="btn btn-danger" id="${json[i].precio}" onclick="EliminarProducto(this)">Eliminar</button></td></tr>`;
+                monto+=parseFloat(json[i].precio);
             }
-       });
+            
+            document.getElementById('disabledTextInput').value=monto;
+            ID++;
+        }
+    });
 }
 
 function EliminarProducto(boton)
@@ -67,13 +56,14 @@ function EliminarProducto(boton)
     document.getElementById('disabledTextInput').value=monto;
 }
 
-function ConfirmarCompra(){
-    
+function ConfirmarCompra(){  
     var Cantidad = {
     "cantidad" : monto
     };
-    ActualizarCaja(monto);      
-     $.ajax({                        
+    
+    ActualizarCaja(monto);  
+    
+    $.ajax({                        
            type: "POST",                 
            url: 'InsertarCompra.php',                     
            data: Cantidad,
@@ -82,8 +72,8 @@ function ConfirmarCompra(){
                $('#body').empty();
                monto=0.0;
                document.getElementById('disabledTextInput').value=monto;
-           }
-       });
+            }
+    });
 }
 
 function ActualizarCaja(a){
@@ -97,8 +87,8 @@ function ActualizarCaja(a){
                if(!$.isEmptyObject(json)){
                   caja= json[0].id;
                }
-                alert(a);
-               var datos = {
+                var datos = {
+                "caso": '1',
                 "cantidad" : a,
                 "caja": caja,
                 "descripcion": "Venta",
@@ -110,12 +100,17 @@ function ActualizarCaja(a){
                    url: 'ActualizarCaja.php',                     
                    data: datos,
                    complete: function(){
-                       alert("hola");
                 }
                  });
            }
        });
    
+}
+
+function CancelarCompra(){
+    monto=0.0;
+    document.getElementById('disabledTextInput').value=monto;
+    $('#body').empty();
 }
 
 
