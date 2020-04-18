@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>TODO supply a title</title>
+        <title>Sign in</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 

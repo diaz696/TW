@@ -59,7 +59,7 @@
 <form>
   <fieldset>
     <div class="form-group">
-      <input type="text" class="form-control" placeholder="Descripción de retiro">
+        <input class="form-control" type="number" min="0" max="9" maxlength="8"  placeholder="Descripción de retiro">
     </div>
     <div class="row">
         <div class="col-md-6"> 
@@ -103,9 +103,9 @@
           <br>
           <br>
       <div class="row">
-          <div class="col-md-2"> 
+          <div class="col-md-1"> 
           </div> 
-          <div class="col-md-10">
+          <div class="col-md-11">
             <table class="table table-responsive text-center" id="miTabla">
                 <thead class="thead-light">
                     <tr>
@@ -113,7 +113,7 @@
                         <th>ID</th>
                         <th>Cantidad total</th>
                         <th>Descripción</th>
-                        <th>¿Quién estuvo a cargo del movimiento?</th>
+                        <th>¿Quién estuvo a cargo cuando se realizó el movimiento?</th>
                         <th>Fecha</th>
                     </tr>
                 </thead>

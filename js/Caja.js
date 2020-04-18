@@ -17,7 +17,7 @@ function cargarFuncion()
     success : function(json) {
         
         var tabla = document.getElementById('miTabla');
-	tabla.innerHTML = '<tr><th>ID</th><th>Cantidad</th><th>Descripcion del movimiento</th><th>Empleado</th><th>Fecha</th></tr>';
+	tabla.innerHTML = '<tr><th>ID</th><th>Cantidad</th><th>Descripcion del movimiento</th><th>¿Quién estuvo a cargo cuando se realizó el movimiento?</th><th>Fecha</th></tr>';
       
 		for(var i = 0; i < json.length; i++){
 		  tabla.innerHTML +=  ` 

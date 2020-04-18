@@ -10,7 +10,7 @@ if($conexion->connect_errno){
 	];
 } else {
 	$conexion->set_charset("utf8");
-	$statement = $conexion->prepare("DELETE FROM ventas");
+	$statement = $conexion->prepare($_POST['cadena']);
 	$statement->execute();
 }
 ?>

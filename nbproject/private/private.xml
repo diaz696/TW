@@ -12,11 +12,22 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp64/www/TastyWings/ObtenerUltimoCaja.php</file>
-            <file>file:/C:/wamp64/www/TastyWings/ConsultaProductos.php</file>
-            <file>file:/C:/wamp64/www/TastyWings/js/ConsultaProductosPrincipal.js</file>
-            <file>file:/C:/wamp64/www/TastyWings/InsertarCompra.php</file>
+            <file>file:/C:/wamp64/www/TastyWings/inicioSesion.php</file>
+            <file>file:/C:/wamp64/www/TastyWings/views/registro.view.php</file>
+            <file>file:/C:/wamp64/www/TastyWings/index.php</file>
             <file>file:/C:/wamp64/www/TastyWings/ActualizarCaja.php</file>
+            <file>file:/C:/wamp64/www/TastyWings/js/Caja.js</file>
+            <file>file:/C:/wamp64/www/TastyWings/views/Estadistica.view.php</file>
+            <file>file:/C:/wamp64/www/TastyWings/views/EstadoCaja.view.php</file>
+            <file>file:/C:/wamp64/www/TastyWings/views/Productos.view.php</file>
+            <file>file:/C:/wamp64/www/TastyWings/js/ConsultaVentas.js</file>
+            <file>file:/C:/wamp64/www/TastyWings/js/ConsultaProductosPrincipal.js</file>
+            <file>file:/C:/wamp64/www/TastyWings/ConsultaProductoEspecifico.php</file>
+            <file>file:/C:/wamp64/www/TastyWings/views/inicio.view.php</file>
+            <file>file:/C:/wamp64/www/TastyWings/views/RegistroVenta.view.php</file>
+            <file>file:/C:/wamp64/www/TastyWings/EliminarVentas.php</file>
+            <file>file:/C:/wamp64/www/TastyWings/CancelarVenta.php</file>
+            <file>file:/C:/wamp64/www/TastyWings/js/ConsultaProductos.js</file>
         </group>
     </open-files>
 </project-private>

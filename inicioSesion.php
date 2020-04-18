@@ -1,10 +1,5 @@
 <?php session_start();
 
-// if(isset($_SESSION['usuario'])){
-//     header('location: index.php');  //Es por si el usuario inicia sesion e intenta entrar al formulario de registro no pueda acceder a ellos
-// }
-
-
 if($_SERVER['REQUEST_METHOD']=='POST'){
    $usuario = filter_var(strtolower($_POST['Usuario']),FILTER_SANITIZE_STRING);
    $password = $_POST['Password'];
@@ -33,10 +28,6 @@ $statement2->execute(array(
     $errores .= '<li style="color: white;">Datos incorrectos</li>';
 }
 }
-    
 
-
-
-
-require 'views/inicio.view.php';
+include_once 'views/inicio.view.php';
 ?>

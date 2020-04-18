@@ -82,13 +82,16 @@ function CancelarVenta(boton){
 }
 
 function EliminarHistorialVentas(){
-    alert("se eliminara");
+    
+    var cadena={
+        'cadena': "DELETE FROM ventas"
+    };
     $.ajax({
-        type: 'SET',
+        type: 'POST',
+        data: cadena,
         url: 'EliminarVentas.php',
         async: false,
         complete: function(){
-            alert("Eliminados");
         }
     });
 }

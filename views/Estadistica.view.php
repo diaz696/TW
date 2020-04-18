@@ -61,10 +61,10 @@
      $(function($){
          $('#grafica').highcharts({
              title:{text:'Estadística de ventas mensual'},
-             xAxis:{categories:['Enero','Marzo','Abril']},
+             xAxis:{categories:['Enero','Febrero','Marzo','Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']},
              yAxis:{title:'Porcentaje %',plotLines:[{value:0,width:1,color:'#808080'}]},
              legend:{layout:'vertical',align:'right',verticalAlign:'middle',borderWidth:0},
-             series:[{type: 'column',name: 'Ventas',data: [10500,15000,8200]}
+             series:[{type: 'column',name: 'Ventas',data: [10500,15000,8200, 4000, 5000,6000,10500,15000,8200, 4000, 5000,6000]}
            ],
              plotOptions:{line:{dataLabels:{enabled:true}}}
          });

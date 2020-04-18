@@ -77,12 +77,12 @@
               <form id="miForma" method="POST" class="form-group">
 
                      <label >Nombre del producto</label>
-                     <input type="text" name="inputNombre" class="form-control" placeholder="Escriba el nuevo nombre del producto">
+                     <input type="text" name="inputNombre" id="inputNombre" class="form-control" placeholder="Escriba el nuevo nombre del producto">
 
                     <br>
                     
                      <label >Precio del producto</label>
-                     <input type="text" name="inputPrecio" class="form-control" placeholder="Escriba el nuevo precio del producto">
+                     <input type="number" name="inputPrecio" id="inputPrecio" class="form-control" placeholder="Escriba el nuevo precio del producto">
                     <br>
                     
                 <button type="button" id="btnAgregar" class="btn btn-success">Actualizar producto</button>
