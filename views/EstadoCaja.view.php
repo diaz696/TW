@@ -87,9 +87,9 @@
 <form>
   <fieldset>
     <div class="form-group">
-      <input type="text" class="form-control" placeholder="Cantidad actualizada de caja">
+      <input type="text" class="form-control" id="inputReconfigurar" placeholder="Cantidad actualizada de caja">
     </div>
-    <button type="submit" class="btn btn-primary">Actualizar caja</button>
+      <button type="submit" class="btn btn-primary" onclick="ActualizarCaja()">Actualizar caja</button>
     </fieldset>
     </div>
   

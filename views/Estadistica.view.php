@@ -12,7 +12,7 @@
     <script src="http://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    
+    <script src="js/Estadistica.js"></script>
 </head>
 <body>
     
@@ -57,19 +57,15 @@
 <!--Aquí termina la barra de navegación-->
 
 <div id="grafica">
-        <script>
-     $(function($){
-         $('#grafica').highcharts({
-             title:{text:'Estadística de ventas mensual'},
-             xAxis:{categories:['Enero','Febrero','Marzo','Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']},
-             yAxis:{title:'Porcentaje %',plotLines:[{value:0,width:1,color:'#808080'}]},
-             legend:{layout:'vertical',align:'right',verticalAlign:'middle',borderWidth:0},
-             series:[{type: 'column',name: 'Ventas',data: [10500,15000,8200, 4000, 5000,6000,10500,15000,8200, 4000, 5000,6000]}
-           ],
-             plotOptions:{line:{dataLabels:{enabled:true}}}
-         });
-     });
-    </script>
+
+</div>
+<br>
+<div class="row">
+    <div class="col-md-5">
+</div>
+<div class="col-md-4">
+   <button type="button" class="btn btn-outline-success " onclick="Actualizar()">Mostrar gráfica</button>
+</div>
 </div>
 
 </body>

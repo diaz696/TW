@@ -33,3 +33,21 @@ function cargarFuncion()
 });
 }
 setInterval(cargarFuncion, 5000);
+
+
+function ActualizarCaja(){
+    var cadena = {
+        'Cantidad': document.getElementById('inputReconfigurar').value,
+        'Movimiento' : "Reconfiguración de caja",
+        'Cargo' : 10      
+    };
+    
+    $.ajax({
+        type: 'POST',
+        url: 'ReconfigurarCaja.php',
+        data: cadena,
+        success: function(){
+            alert("Caja reconfigurada!!!");
+        }
+    });
+}
