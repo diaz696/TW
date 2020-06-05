@@ -4,7 +4,7 @@ class Conexion{
     
 static function  Conectar (){
  $conexion = null;
- $host = '127.0.0.1';
+ $host = '192.168.0.3';
  $db = 'tastywings';
  $user = 'root';
  $pwd = '';
